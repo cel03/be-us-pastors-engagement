@@ -1,8 +1,9 @@
 // src/server.ts
 
 import express, { type Request, type Response } from 'express';
-
-import { HttpCode } from './core/constants';
+import cors from 'cors';
+import { HttpCode } from '../core/constants';
+import { v1Router } from './api/v1';
 
 interface ServerOptions {
 	port: number;
@@ -22,6 +23,10 @@ export class Server {
 		//* Middlewares
 		this.app.use(express.json()); // parse json in request body (allow raw)
 		this.app.use(express.urlencoded({ extended: true })); // allow x-www-form-urlencoded
+
+		this.app.use(cors());
+
+		this.app.use('/api/v1', v1Router);
 
 		// Test rest api
 		this.app.get('/', (_req: Request, res: Response) => {

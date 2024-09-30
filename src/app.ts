@@ -1,14 +1,9 @@
 import { envs } from './core/config/env';
-import { Server } from './server';
+import { Server } from './infra/server';
 
-(() => {
-	main();
-})();
+const server = new Server({
+	port: envs.PORT,
+	apiPrefix: envs.API_PREFIX
+});
 
-function main(): void {
-	const server = new Server({
-		port: envs.PORT,
-		apiPrefix: envs.API_PREFIX
-	});
-	void server.start();
-}
+void server.start();
