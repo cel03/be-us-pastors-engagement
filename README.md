@@ -7,6 +7,7 @@ This project contains the Pastor Engagement API, which allows users to manage pa
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
+- [Project Structure](#project-structure)
 
 ## Prerequisites
 
