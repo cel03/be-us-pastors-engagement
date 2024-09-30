@@ -31,7 +31,7 @@ export class Server {
     this.app.use('/api/v1', v1Router);
 
     // Test rest api
-    this.app.get('/', (_req: Request, res: Response) => {
+    this.app.get('/api/v1/', (_req: Request, res: Response) => {
       return res.status(HttpCode.OK).send({
         message: `Welcome to Initial API! \n Endpoints available at http://localhost:${this.port}/`
       });
