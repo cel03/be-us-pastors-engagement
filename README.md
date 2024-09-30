@@ -32,10 +32,10 @@ This project contains the Pastor Engagement API, which allows users to manage pa
 
 3. Set up environment variables:
 
-   Use the `.env.example` file as a template to create your own `.env` file:
+   Use the `.env.template` file as a template to create your own `.env` file:
 
    ```bash
-   cp .env.example .env
+   cp .env.template .env
    ```
 
    Or create a `.env` file in the root directory and add the following variables:
@@ -53,7 +53,7 @@ This project contains the Pastor Engagement API, which allows users to manage pa
 4. Start the database using Docker (optional):
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
    Otherwise, start a MySQL database using a database server as preferred.
