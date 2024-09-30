@@ -5,6 +5,8 @@ import cors from 'cors';
 import { HttpCode } from '../core/constants';
 import { v1Router } from './api/v1';
 
+import db from '../models';
+
 interface ServerOptions {
 	port: number;
 	apiPrefix: string;
@@ -35,8 +37,16 @@ export class Server {
 			});
 		});
 
-		this.app.listen(this.port, () => {
-			console.log(`Server running on port ${this.port}...`);
-		});
+		try {
+			// TODO: Remove alter: true in production
+			await db.sequelize.sync({ alter: true });
+			console.log('Database & tables created!');
+
+			this.app.listen(this.port, () => {
+				console.log(`Server running on port ${this.port}...`);
+			});
+		} catch (error) {
+			console.error('Error syncing database:', error);
+		}
 	}
 }
