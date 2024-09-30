@@ -1,51 +1,51 @@
 {
-	"name": "be-pastors-engagement",
-	"version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"test": "jest",
-		"test:watch": "jest --watchAll",
-		"test:coverage": "jest --coverage",
-		"dev": "ts-node-dev --respawn --clear --transpile-only --ignore-watch node_modules ./src/app.ts",
-		"build": "rimraf ./dist && tsc",
-		"start": "node dist/app.js",
-		"db:seed": "ts-node run-seeders.ts"
-	},
-	"engines": {
-		"node": ">=18.20.4"
-	},
-	"author": "",
-	"license": "ISC",
-	"description": "",
-	"devDependencies": {
-		"@types/express": "^5.0.0",
-		"@types/jest": "^29.5.13",
-		"@types/node": "^22.7.4",
-		"@types/supertest": "^6.0.2",
-		"@typescript-eslint/eslint-plugin": "^6.21.0",
-		"eslint": "^8.57.1",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-config-standard-with-typescript": "^43.0.1",
-		"eslint-plugin-import": "^2.30.0",
-		"eslint-plugin-n": "^16.6.2",
-		"eslint-plugin-prettier": "^5.2.1",
-		"eslint-plugin-promise": "^6.6.0",
-		"jest": "^29.7.0",
-		"prettier": "^3.3.3",
-		"rimraf": "^6.0.1",
-		"sequelize-cli": "^6.6.2",
-		"supertest": "^7.0.0",
-		"ts-jest": "^29.2.5",
-		"ts-node-dev": "^2.0.0",
-		"typescript": "^5.6.2"
-	},
-	"dependencies": {
-		"add": "^2.0.6",
-		"cors": "^2.8.5",
-		"dotenv": "^16.4.5",
-		"env-var": "^7.5.0",
-		"express": "^4.21.0",
-		"mysql2": "^3.11.3",
-		"sequelize": "^6.37.3"
-	}
+  "name": "be-pastors-engagement",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "dev": "ts-node-dev --respawn --clear --transpile-only --ignore-watch node_modules ./src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "node dist/app.js",
+    "db:seed": "ts-node run-seeders.ts"
+  },
+  "engines": {
+    "node": ">=18.20.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.4",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-promise": "^6.6.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "sequelize-cli": "^6.6.2",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "env-var": "^7.5.0",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.3"
+  }
 }
