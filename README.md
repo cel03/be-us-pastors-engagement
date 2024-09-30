@@ -88,3 +88,26 @@ Once the server is running, you can access the API at `http://localhost:3000/api
 ### US State Endpoints
 
 - `GET /states`: Retrieve all US states.
+
+## Project Structure
+
+The project is organized by business modules, each containing its own logic, repository, model, and other related files, helping in maintaining a clean and scalable codebase.
+
+Example:
+
+```plaintext
+src/
+├── modules/
+│   ├── engagement/
+│   │   ├── controllers/
+│   │   ├── dtos/
+│   │   ├── mappers/
+│   │   ├── models/
+│   │   └── routes/
+│   ├── pastor/
+│   │   ├── ...
+│   ├── ...
+├── infra/
+│   └── server.ts
+└── app.ts
+```
